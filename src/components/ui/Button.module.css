@@ -1,0 +1,86 @@
+.btn {
+  --h: 49px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--h);
+  padding: 0 clamp(22px, 2vw, 34px);
+  border-radius: var(--radius-btn);
+  font-size: var(--fs-mono);
+  white-space: nowrap;
+  isolation: isolate;
+  transition: transform 0.25s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.3s var(--ease);
+}
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---- primary (gradient) ---- */
+.primary {
+  color: #fff;
+  background: var(--grad-brand);
+  background-size: 140% 140%;
+  background-position: 0% 50%;
+}
+.primary::before {
+  /* glow layer */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--grad-brand);
+  filter: blur(16px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s var(--ease);
+}
+.primary:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+}
+.primary:hover::before {
+  opacity: 0.55;
+}
+
+/* ---- outline (on dark) ---- */
+.outline {
+  color: var(--c-text);
+  border: 1px solid var(--c-hairline-strong);
+  background: rgba(233, 244, 249, 0.02);
+}
+.outline:hover {
+  border-color: var(--c-accent);
+  color: #fff;
+  background: rgba(0, 180, 253, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ---- outline (on light section) ---- */
+.outline-light {
+  color: var(--c-ink);
+  border: 1px solid rgba(11, 22, 32, 0.18);
+  background: transparent;
+}
+.outline-light:hover {
+  border-color: var(--c-accent-deep);
+  color: var(--c-accent-deep);
+  transform: translateY(-2px);
+}

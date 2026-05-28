@@ -1,0 +1,66 @@
+/* ============================================================
+   N7 — Design tokens
+   Values extracted directly from the Figma source (file ktuyhOppLLgLFCZwzQCOBk).
+   ============================================================ */
+:root {
+  /* ---- Color: surfaces ---- */
+  --c-bg: #000d12; /* page background (dark) */
+  --c-bg-light: #ffffff; /* light section (Digital banking) */
+  --c-surface: #08131a; /* slightly raised dark surface */
+  --c-surface-2: #0c1922; /* cards on dark */
+  --c-hairline: rgba(233, 244, 249, 0.1); /* card borders on dark */
+  --c-hairline-strong: rgba(233, 244, 249, 0.22);
+
+  /* ---- Color: text ---- */
+  --c-text: #e9f4f9; /* primary near-white */
+  --c-text-strong: #ffffff;
+  --c-text-muted: rgba(233, 244, 249, 0.6);
+  --c-text-dim: rgba(233, 244, 249, 0.4);
+  --c-text-slate: #586e84; /* muted blue-grey */
+  --c-ink: #0b1620; /* text on light section */
+  --c-ink-muted: #586e84;
+
+  /* ---- Color: brand ---- */
+  --c-accent: #00b4fd; /* cyan */
+  --c-accent-deep: #003ace; /* deep blue */
+  --grad-brand: linear-gradient(99deg, #00b4fd 0%, #003ace 100%);
+  --grad-brand-v: linear-gradient(180deg, #00b4fd 0%, #003ace 100%);
+  --grad-brand-diag: linear-gradient(135deg, #00b4fd 0%, #003ace 100%);
+
+  /* ---- Typography ---- */
+  --font-sans: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Chivo Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* fluid type scale (min, preferred, max) */
+  --fs-display: clamp(2.5rem, 1.1rem + 5.6vw, 4.1875rem); /* 40 -> 67px  hero */
+  --fs-h2: clamp(2rem, 1.1rem + 3.6vw, 3.3125rem); /* 32 -> 53px */
+  --fs-h2-sm: clamp(1.75rem, 1.2rem + 2.2vw, 2.3125rem); /* 28 -> 37px */
+  --fs-h3: clamp(1.5rem, 1.1rem + 1.6vw, 2.6875rem); /* 24 -> 43px case study */
+  --fs-lead: clamp(1.25rem, 1rem + 1vw, 1.6875rem); /* 20 -> 27px */
+  --fs-card-title: 1.375rem; /* 22px */
+  --fs-body: 1rem; /* 16px */
+  --fs-sm: 0.875rem; /* 14px */
+
+  /* mono label sizes */
+  --fs-mono: 0.9375rem; /* 15px buttons */
+  --fs-mono-sm: 0.875rem; /* 14px learn more */
+  --fs-mono-xs: 0.75rem; /* 12px read more */
+  --fs-mono-2xs: 0.5625rem; /* 9px getting started */
+  --ls-mono: 0.06em;
+
+  /* ---- Layout ---- */
+  --maxw: 1280px; /* content width (1440 - 2*80) */
+  --gutter: clamp(1.25rem, 0.3rem + 4vw, 5rem); /* 20 -> 80px */
+  --radius-btn: 10px;
+  --radius-card: 16px;
+  --radius-lg: 24px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.5s;
+
+  /* ---- Elevation ---- */
+  --shadow-card: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  --shadow-float: 0 30px 80px -30px rgba(0, 70, 140, 0.45);
+}
